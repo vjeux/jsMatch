@@ -94,11 +94,11 @@ console.log match file, '''
 Match All
 ---------
 
-match_all is the same as match but captures more than the first.
+match.all is the same as match but captures more than the first.
 
 ### Prototype
 
-	match_all($str, $regex, $trim = true)
+	match.all(str, regex, trim = true)
 
 Takes
 
