@@ -35,7 +35,9 @@ Returns
 
 
 ### Examples
-For all the examples, this is the file variable.
+We use Coffeescript for the examples as it supports multiline strings. However it works as well in Javascript.
+
+In all the examples, this is the file variable. 
 
 ```coffeescript
 file = '''
@@ -48,28 +50,28 @@ file = '''
 The value is directly returned by the function, no need to do write another line to get the result. false is returned when nothing is matched.
 
 ```coffeescript
-console.log match file, 'href="([^"]+)"'
+match file, 'href="([^"]+)"'
 # null
 ```
 
 If you are only capturing one element, it is given as is. No more useless single array.
 
 ```coffeescript
-console.log match file, 'id="([0-9]+)"'
+match file, 'id="([0-9]+)"'
 # 123
 ```
 
 When naming elements, all the numbered values are removed!
 
 ```coffeescript
-console.log match file, '<a class="(?<class>[^"]+)" id="(?<class>[^"]+)">'
+match file, '<a class="(?<class>[^"]+)" id="(?<class>[^"]+)">'
 # { class: '123' }
 ```
 
 The first element of the resulting array (the matched string) is removed, you now only get what you wanted!
 
 ```coffeescript
-console.log match '<a class="abc" id="123">', '<a class="([^"]+)" id="([^"]+)">'
+match '<a class="abc" id="123">', '<a class="([^"]+)" id="([^"]+)">'
 # [ 'abc', '123' ]
 ```
 
@@ -78,7 +80,7 @@ The . is also capturing \n, this will let you use the [.*? trick](http://www.goo
 
 ```coffeescript
 # WARNING: Make sure you convert the indentation to TABs when copy & pasting the code!
-console.log match file, '''
+match file, '''
   <div>
 	.*?
 	<a class="(?<class>[^"]+)" id="(?<id>[^"]+)">
@@ -122,15 +124,15 @@ file = '''
 <a href="http://www.google.com/">Google</a>
 '''
 
-console.log match.all file, '<a href="[^"]+">(.*?)</a>'
+match.all file, '<a href="[^"]+">(.*?)</a>'
 # [ 'Vjeux', 'Curse', 'Google' ]
 
-console.log match.all file, '<a href="([^"]+)">(.*?)</a>'
+match.all file, '<a href="([^"]+)">(.*?)</a>'
 #[ [ 'http://blog.vjeux.com/', 'Vjeux' ],
 #  [ 'http://www.curse.com/', 'Curse' ],
 #  [ 'http://www.google.com/', 'Google' ] ]
 
-console.log match.all file, '<a href="(?<link>[^"]+)">(?<name>.*?)</a>'
+match.all file, '<a href="(?<link>[^"]+)">(?<name>.*?)</a>'
 #[ { link: 'http://blog.vjeux.com/', name: 'Vjeux' },
 #  { link: 'http://www.curse.com/', name: 'Curse' },
 #  { link: 'http://www.google.com/', name: 'Google' } ]
