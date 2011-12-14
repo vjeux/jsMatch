@@ -22,16 +22,15 @@ Takes
 
 * **str**: the string to execute the search on
 * **regex**: the regular expression to match
-	* ` is automatically used as regex escaping character
 	* \n and \t are trimmed (not spaces!)
 	* Multiple line environment
 * **trim**: Optional: false to disable the removal of the \n and \t
 
 Returns
 
-* **false**: is nothing is matched
+* **null**: is nothing is matched
 * **string**: if there's one non-named captured element
-* **associative array**: if there are named captured elements
+* **object**: if there are named captured elements
 * **array**: all the captured elements
 
 
@@ -103,7 +102,6 @@ Takes
 
 * **str**: the string to execute the search on
 * **regex**: the regular expression to match
-	* ` is automatically used as regex escaping character
 	* \n and \t are trimmed (not spaces!)
 	* Multiple line environment
 * **trim**: Optional: false to disable the removal of the \n and \t
@@ -112,7 +110,7 @@ Returns
 
 * Array of 
 	* **string**: if there's one non-named captured element
-	* **associative array**: if there are named captured elements
+	* **object**: if there are named captured elements
 	* **array**: all the captured elements
 
 ### Examples
