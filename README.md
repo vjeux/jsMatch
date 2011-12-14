@@ -36,7 +36,7 @@ Returns
 
 
 ### Examples
-For all the examples, this is the $file variable.
+For all the examples, this is the file variable.
 
 ```coffeescript
 file = '''
