@@ -1,0 +1,21 @@
+{
+	"name": "Match",
+	"version": "1.0.0",
+	"description": "Wrapper around regexp to make them user friendly.",
+	"keywords": ["match", "regexp", "regex", "preg_match"],
+	"homepage": "http://blog.vjeux.com/",
+	"author": {
+		"name": "Vjeux",
+		"email": "vjeuxx@gmail.com",
+		"url": "http://blog.vjeux.com/"
+	},
+	"dependencies": {
+		"xregexp": "*"
+	},
+	"files": ["src/match.js"],
+	"main": "src/match.js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/vjeux/jsMatch.git"
+	}
+}
