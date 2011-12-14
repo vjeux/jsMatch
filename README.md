@@ -3,6 +3,28 @@
 
 Regexp are your ally when you are working on web spiders, however it is not really convenient to work with. Those small helpers will help you capture elements with more ease!
 
+<table><tr><td><strong>Match</strong>
+
+<pre>
+match '&lt;a class="abc" id="123"&gt;', 'id="([0-9]+)"'
+# 123
+
+
+
+</pre>
+
+</td><td><strong>Default Regexp</strong>
+
+<pre>
+'&lt;a class="abc" id="123"&gt;'.match /id="([0-9]+)"/
+#[ 'id="123"',
+#  '123',
+#  index: 15,
+#  input: '<a class="abc" id="123">' ]
+</pre>
+
+</td></tr></table>
+
 * The result is directly in the return value and have the form you expect
   * Capturing one element will give you that element, it won't be wrapper on an array
 	* No more duplicate in the array when naming the elements
