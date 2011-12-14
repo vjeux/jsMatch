@@ -11,6 +11,13 @@ Regexp are your ally when you are working on web spiders, however it is not real
 	* ms options to be multi-line ready
 	* tabs and new lines are removed to let you write readable regex
 
+```
+npm install match
+
+node
+> var match = require('match');
+```
+
 Match
 -----
 
