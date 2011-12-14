@@ -8,7 +8,6 @@ Regexp are your ally when you are working on web spiders, however it is not real
 	* No more duplicate in the array when naming the elements
 	* The matched string is removed from the result. It is annoying when dumping the result and who ever used it!?
 * Regex is configured properly to fit your needs
-	* ` is used as regex escape character
 	* ms options to be multi-line ready
 	* tabs and new lines are removed to let you write readable regex
 
