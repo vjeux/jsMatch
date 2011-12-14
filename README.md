@@ -8,7 +8,6 @@ Regexp are your ally when you are working on web spiders, however it is not real
 	* No more duplicate in the array when naming the elements
 	* The matched string is removed from the result. It is annoying when dumping the result and who ever used it!?
 * Regex is configured properly to fit your needs
-	* ` is used as regex escape character
 	* ms options to be multi-line ready
 	* tabs and new lines are removed to let you write readable regex
 
@@ -23,21 +22,20 @@ Takes
 
 * **str**: the string to execute the search on
 * **regex**: the regular expression to match
-	* ` is automatically used as regex escaping character
 	* \n and \t are trimmed (not spaces!)
 	* Multiple line environment
 * **trim**: Optional: false to disable the removal of the \n and \t
 
 Returns
 
-* **false**: is nothing is matched
+* **null**: is nothing is matched
 * **string**: if there's one non-named captured element
-* **associative array**: if there are named captured elements
+* **object**: if there are named captured elements
 * **array**: all the captured elements
 
 
 ### Examples
-For all the examples, this is the $file variable.
+For all the examples, this is the file variable.
 
 ```coffeescript
 file = '''
@@ -104,7 +102,6 @@ Takes
 
 * **str**: the string to execute the search on
 * **regex**: the regular expression to match
-	* ` is automatically used as regex escaping character
 	* \n and \t are trimmed (not spaces!)
 	* Multiple line environment
 * **trim**: Optional: false to disable the removal of the \n and \t
@@ -113,7 +110,7 @@ Returns
 
 * Array of 
 	* **string**: if there's one non-named captured element
-	* **associative array**: if there are named captured elements
+	* **object**: if there are named captured elements
 	* **array**: all the captured elements
 
 ### Examples
