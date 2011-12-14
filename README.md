@@ -5,9 +5,9 @@ Regexp are your ally when you are working on web spiders, however it is not real
 
 <table><tr><td><strong>Match</strong>
 
-<pre>
+<pre lang="coffeescript">
 match '&lt;a class="abc" id="123"&gt;', 'id="([0-9]+)"'
-# 123
+> '123'
 
 
 
@@ -15,12 +15,12 @@ match '&lt;a class="abc" id="123"&gt;', 'id="([0-9]+)"'
 
 </td><td><strong>Default Regexp</strong>
 
-<pre>
+<pre lang="coffeescript">
 '&lt;a class="abc" id="123"&gt;'.match /id="([0-9]+)"/
-#[ 'id="123"',
-#  '123',
-#  index: 15,
-#  input: '<a class="abc" id="123">' ]
+> [ 'id="123"',
+>   '123',
+>   index: 15,
+>   input: '<a class="abc" id="123">' ]
 </pre>
 
 </td></tr></table>
